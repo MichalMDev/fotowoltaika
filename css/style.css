@@ -1,0 +1,174 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* --color1: rgba(45, 125, 210, 1);
+    --color2: rgba(151, 204, 4, 1);
+    --color3: rgba(241, 143, 1, 1);
+    --color4: rgba(244, 93, 1, 1);
+    --color5: rgba(51, 161, 253, 1); */
+
+    --color1: rgba(71, 106, 111, 1);
+    --color2: rgba(23, 190, 187, 1);
+    --color3: rgba(239, 235, 206, 1);
+    --color4: rgba(67, 146, 241, 1);
+    --color5: rgba(13, 19, 33, 1);
+
+    box-sizing: border-box;
+    /* font-size: 20px; */
+    font-family: 'Lato', sans-serif;
+}
+/* .logoContactMenu{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+align-items: center;
+border-bottom: 2px solid var(--color1);
+}
+.logo {
+    padding: 30px;
+    border: 3px solid var(--color1);
+}
+.contact {
+    text-decoration: none;
+    padding-right: 20%;
+    text-align: left;
+} */
+
+.stickyBar{
+    position: sticky;
+    height: 5vh;
+    background-color: white;
+}
+header {
+    background-image: url(/img/cc/photovoltaic-2138992_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+header h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+    width: 100%;
+    padding: 15px;
+    text-shadow: 3px 3px black;
+    background-color: rgba(255, 255, 255, 0.5);
+
+
+}
+
+.burger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    /* line-height: 50px; */
+    z-index: 1;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--color5);
+    border-radius: 5px;
+
+
+}
+
+.burger i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+i.off {
+    display: none;
+}
+
+i.fa-angle-up {
+    color: black;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    /* right: 0; */
+    width: 100%;
+    top: 0;
+    /* height: 30vh; */
+    padding: 10px;
+    /* background-color: var(--color1); */
+    transition: .2s;
+    font-size: 24px;
+}
+
+nav.off {
+    top: -300px;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* background-color: var(--color2); */
+    width: 60%;
+    margin: 0 auto;
+
+}
+
+ul li {
+    width: 100%;
+    list-style: none;
+
+    background-color: rgba(255, 255, 255, 0.7);
+
+}
+
+ul li a {
+    color: var(--color5);
+    border-bottom: 1px solid white;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 5px;
+    transition: .2s ease;
+
+}
+
+ul li a:hover {
+    border-bottom: 1px solid var(--color1);
+
+
+    /* SEKCJE */
+}
+
+section {
+    /* margin-top: 50vh; */
+    /* height: 1vh; */
+    background-color: var(--color3);
+    padding: 10px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+}
+
+section:nth-of-type(1) {
+    margin-top: 20px;
+
+}
+
+section div {
+    margin: 10px;
+}
+
+section i {
+    font-size: 40px;
+}
