@@ -30,7 +30,8 @@ border-bottom: 2px solid var(--color1);
     font-weight: bold;
     /* margin: 10px; */
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -43,6 +44,7 @@ a{
     border-top: 2px solid #374B78;
     border-bottom: 1px solid #374B78;
     text-align: left;
+    z-index: 1;
 
 }
 
@@ -59,9 +61,11 @@ a{
 
 header {
 
-    background-image: url(/img/cc/photovoltaic-2138992_1920.jpg);
+    /* background-image: url(/img/cc/photovoltaic-2138992_1920.jpg); */
+    background-image: url(/img/cc/solar-panels-1477987_1280.jpg);
+
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
     height: 100vh;
     position: relative;
     text-align: center;
@@ -178,10 +182,13 @@ section {
 }
 
 section p {
-    font-size: 18px;
+    font-size: 20px;
 
 }
 
+section ul {
+    font-size: 20px;
+}
 
 section:nth-child(even) {
     background-color: var(--color5);
@@ -207,6 +214,7 @@ section h2 {
 
     border-bottom: 3px solid var(--color2);
 }
+
 section:nth-of-type(3) h2 {
 
     border-bottom: none;
@@ -242,6 +250,7 @@ section ul li {
 
 .avatar {
     background-image: url(/img/cc/avatar-1577909_640.png);
+
     margin: 10px auto;
     width: 100px;
     height: 100px;
@@ -254,12 +263,14 @@ section ul li {
 }
 
 .features {
-    background-image: url(/img/cc/solar-panels-1477987_640.jpg);
+    /* background-image: url(/img/cc/solar-panels-1477987_640.jpg); */
+    background-image: url(/img/cc/photovoltaic-2138992_1920.jpg);
+
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
     background-size: cover;
-   
+
     padding: 10px;
     display: flex;
     /* flex-wrap: wrap; */
@@ -271,7 +282,9 @@ section ul li {
     color: white;
 
 }
+
 .features div {
+
     display: flex;
     flex-direction: column;
 }
@@ -289,37 +302,102 @@ section i {
     font-size: 60px;
 }
 
+
+/* gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery div {
+    position: relative;
+    height: 350px;
+    width: 350px;
+    overflow: hidden;
+    margin: 15px 15px;
+
+
+
+}
+
+.gallery div p {
+    position: absolute;
+    width: 100%;
+    padding: 5px;
+    background-color: rgba(233, 241, 247, 0.8);
+    border-top: 2px solid #374B78;
+    font-size: 20px;
+    bottom: 0;
+    left: 0;
+}
+
+.gallery div img {
+    width: 100%;
+    height: 100%;
+}
+
 section:nth-of-type(6) p:nth-of-type(1) {
-margin-bottom: 20px;
- }
+    margin-bottom: 20px;
+}
+
+
+/* <section class="opinions" id="scrollRecomendations">
+        <h2>Co o nas mówią?</h2>
+        <p>Poznaj opinie naszych klientów</p>
+        <div class="opinion">
+            <div class="CompanyName">Firma Sp.z.o.o</div>
+            <div class="comment">Bardzo dobra firma, polecam</div>
+        </div> */
+
+
+.opinions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+ 
+}
+.opinion {
+    border-radius: 20px;
+    width: 20%;
+}
+.opinion:nth-child(even) {
+    background-color: var(--color4);
+}
 
 form {
-margin: 0 auto; 
-   width: 80%;
+    margin: 0 auto;
+    width: 80%;
     display: flex;
     flex-direction: column;
     font-size: 20px;
 
 
 }
- label{
-    text-align: left;
-margin: 5px 0;
-    }
-     input {
-        height: 50px;
-        font-size: 20px;
-    }
-     form textarea {
-        height: 150px;
-         
-    }
-     input:focus, form textarea:focus{
-        border: 2px solid #374B78; 
-        outline: none;
 
-    }
-  
+label {
+    text-align: left;
+    margin: 5px 0;
+}
+
+input,
+textarea {
+    height: 50px;
+    font-size: 20px;
+}
+
+form textarea {
+    height: 150px;
+
+}
+
+input:focus,
+form textarea:focus {
+    border: 2px solid #374B78;
+    outline: none;
+
+}
+
 footer {
     padding: 15px;
     background-color: var(--color5);
@@ -328,19 +406,21 @@ footer {
 
 footer i {
     font-size: 20px;
-}   
-footer p{
+}
+
+footer p {
     padding: 2px;
 }
 
 .fa-facebook {
     display: inline-block;
-color: #3b5998;
+    color: #3b5998;
 }
-.fa-youtube{
+
+.fa-youtube {
     display: inline-block;
 
-color: #c4302b;
+    color: #c4302b;
 }
 
 footer p:last-child {
