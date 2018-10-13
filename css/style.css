@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    
+
     /* --color1: rgba(71, 106, 111, 1);
     --color2: rgba(23, 190, 187, 1);
     --color3: rgba(239, 235, 206, 1);
@@ -9,14 +9,15 @@
     --color5: rgba(13, 19, 33, 1); */
 
     --color1: rgba(55, 75, 120, 1);
---color2: rgba(183, 195, 243, 1);
---color3: rgba(202, 207, 133, 1);
---color4: rgba(125, 132, 145, 1);
---color5: rgba(233, 241, 247, 1);
+    --color2: rgba(183, 195, 243, 1);
+    --color3: rgba(202, 207, 133, 1);
+    --color4: rgba(125, 132, 145, 1);
+    --color5: rgba(233, 241, 247, 1);
     box-sizing: border-box;
     /* font-size: 20px; */
     font-family: 'Lato', sans-serif;
 }
+
 /* .logoContactMenu{
     display: flex;
     justify-content: space-around;
@@ -24,17 +25,21 @@
 align-items: center;
 border-bottom: 2px solid var(--color1);
 } */
+.bold {
+    display: inline-block;
+    font-weight: bold;
+    /* margin: 10px; */
+}
 
-
-.stickyBar{
+.stickyBar {
     position: fixed;
     top: 20px;
     height: 10vh;
     width: 100%;
-    background-color: rgba(233, 241, 247, 0.8);
+    background-color: rgba(233, 241, 247, 0.9);
     border-top: 2px solid #374B78;
-    /* border-bottom: 2px solid #374B78; */
-text-align: left;
+    border-bottom: 1px solid #374B78;
+    text-align: left;
 
 }
 
@@ -42,12 +47,15 @@ text-align: left;
     /* padding: 30px; */
     font-size: 18px;
 }
+
 .contact {
     text-decoration: none;
     padding-right: 20%;
     text-align: left;
 }
+
 header {
+
     background-image: url(/img/cc/photovoltaic-2138992_1920.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
@@ -93,9 +101,12 @@ header h1 {
 }
 
 .burger i {
+    font-size: 30px;
     position: absolute;
     top: 50%;
     left: 50%;
+    color: var(--color5);
+
     transform: translate(-50%, -50%);
 }
 
@@ -103,17 +114,11 @@ i.off {
     display: none;
 }
 
-i.fa-angle-up {
-    color: black;
-}
-
 nav {
     position: absolute;
     left: 0;
-    /* right: 0; */
     width: 100%;
     top: 10vh;
-    /* height: 30vh; */
     padding: 10px;
     /* background-color: var(--color1); */
     transition: .2s;
@@ -124,7 +129,7 @@ nav.off {
     top: -300px;
 }
 
-ul {
+nav ul {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -134,17 +139,17 @@ ul {
 
 }
 
-ul li {
+nav ul li {
     width: 100%;
     list-style: none;
 
-    background-color: rgba(233, 241, 247, 0.8);
+    background-color: rgba(233, 241, 247, 0.9);
 
 }
 
-ul li a {
+nav ul li a {
     color: var(--color1);
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--color5);
     display: block;
     text-align: center;
     text-decoration: none;
@@ -161,33 +166,148 @@ ul li a:hover {
     /* SEKCJE */
 }
 
-section{
-    background-color: var(--color2);
+section {
+    /* background-color: var(--color2); */
+    text-align: center;
+    padding: 20px;
 
 }
-section:nth-child(even){
+
+section p {
+    font-size: 18px;
+
+}
+
+
+section:nth-child(even) {
     background-color: var(--color5);
 
 }
-.features {
-    /* margin-top: 50vh; */
-    /* height: 1vh; */
-    padding: 10px;
-    display: flex;
-    /* /* flex-wrap: wrap; */
-    text-align: center;
-    /* flex-direction: column; */
-}
 
 section:nth-of-type(1) {
-    margin-top: 20px;
+    padding-top: 20px;
+    /* margin-top: 20px; */
+
 
 }
+
+section h2 {
+    display: inline-block;
+    font-size: 35px;
+    /* padding-bottom: 20px; */
+}
+
+
+section h2 {
+
+    border-bottom: 3px solid var(--color2);
+}
+section:nth-of-type(3) h2 {
+
+    border-bottom: none;
+}
+
+section:nth-of-type(1) p:nth-of-type(1),
+section:nth-of-type(1) p:nth-of-type(3) {
+    margin-top: 20px;
+    padding-bottom: 10px;
+}
+
+section:nth-of-type(1) h2:nth-of-type(2),
+section:nth-of-type(2) h2:nth-of-type(1) {
+    margin: 20px 0;
+}
+
+section button {
+    display: block;
+    margin: 0 auto;
+    color: white;
+    font-size: 20px;
+    width: 100px;
+    height: 50px;
+    background-color: var(--color1);
+
+}
+
+section ul li {
+    list-style-type: none;
+}
+
+.avatar {
+    background-image: url(/img/cc/avatar-1577909_640.png);
+    margin: 10px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.features {
+    background-image: url(/img/cc/solar-panels-1477987_640.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    background-size: cover;
+   
+    padding: 10px;
+    display: flex;
+    /* flex-wrap: wrap; */
+    text-align: center;
+    flex-direction: column;
+}
+
+.features {
+    color: white;
+
+}
+.features div {
+    display: flex;
+    flex-direction: column;
+}
+
+.features p {
+    font-size: 20px;
+}
+
 
 section div {
     margin: 10px;
 }
 
 section i {
-    font-size: 40px;
+    font-size: 60px;
 }
+
+form {
+margin: 0 auto; 
+   width: 80%;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+
+
+}
+form label{
+    text-align: left;
+margin: 5px 0;
+    }
+    form input, form textarea {
+        height: 50px;
+        font-size: 20px;
+    }
+    form textarea {
+        height: 100px;
+         
+    }
+    form input:focus, form textarea:focus{
+        border: 2px solid #374B78; 
+        outline: none;
+
+    }
+    form button {
+        margin-top: 20px;
+    }

@@ -14,50 +14,70 @@
 </head>
 
 <body>
-       <!-- <div class="logoContactMenu">
-                <div class="logo">OZE ZE SŁOŃCA LOGO</div>
-                <div class="contact">
-                    <a href="tel:+48735875822">Tel.: 735-875-822</a>
-                    <p>Email:Tomasz@email.com</p>
-                </div> -->
-            </div>
-    <header>
+            <header>
         <h1>Fotowoltaika dla Ciebie!</h1>
     </header>
     <div class="stickyBar">
-            <div class="logo">OZE ZE SŁOŃCA LOGO</div>
-            <div class="contact">
-                    <a href="tel:+48735875822">Tel.: 735-875-822</a>
-                    <p>Email:Tomasz@email.com</p>
-                </div>
-    <div class="burger">
-        <i class="fas fa-bars"></i>
-        <i class="fas fa-angle-up off"></i>
+        <div class="logo">OZE ZE SŁOŃCA LOGO</div>
+        <div class="contact">
+            <a href="tel:+48735875822">Tel.: 735-875-822</a>
+            <p>Email:Tomasz@email.com</p>
+        </div>
+        <div class="burger">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-angle-up off"></i>
+        </div>
+        <nav class="off">
+            <ul>
+                <li><a href='#aboutUs'>O nas</a></li>
+                <li><a href='#features'>Korzyści fotowoltaiki </a></li>
+                <li><a href='#'>Realizacje</a></li>
+                <li><a href='#'>Rekomendacje</a></li>
+                <li><a href='#'>Kalkulator</a></li>
+                <li><a href='#contact'>Kontakt</a></li>
+
+
+            </ul>
+        </nav>
     </div>
-    <nav class="off">
-        <ul>
-            <li><a href='#'>O nas</a></li>
-            <li><a href='#'>Korzyści fotowoltaiki </a></li>
-            <li><a href='#'>Realizacje</a></li>
-            <li><a href='#'>Rekomendacje</a></li>
-            <li><a href='#'>Kalkulator</a></li>
-            <li><a href='#'>Kontakt</a></li>
-
-
-        </ul>
-    </nav>
-</div>
     <!-- Sekcje -->
+    <section>
+        <h2>Potrzebujesz energii fotowoltaicznej?</h2>
+        <p>Trafiłeś doskonale! Pomożemy Ci z każdym problemem i zapytaniem.</p>
+        <p>Pracę nad każdym projektem zaczynam od przybliżenia klientowi, w zrozumiały sposób, tematu zielonej energii
+            od A do Z a kończąc na skrupulatnym rozpisaniu stopy zwrotu. Obecnie skupiam się na doradztwie na terenie
+            woj. pomorskiego.
+            Jeśli jesteś spoza tego regionu, a interesują Cię odnawialne źródła energii, skontaktuj się – a na pewno
+            Cię odwiedzimy.
+            <p>W swojej pracy korzystamy z urządzeń takich uznanych producentów, takich jak</p>
+            <ul>
+                <li>
+                    <div class="bold">Producenci paneli:</div> JA SOLAR,Q-cells
+                </li>
+                <li>
+                    <div class="bold">Producenci:</div> Fronius, ABB
+                </li>
+                <li>
+                    <div class="bold">Konstrukcja:</div> Corab
+                </li>
+            </ul>
+        </p>
+        <h2>Zadaj nam pytanie!</h2>
+        <button>Kontakt</button>
+    </section>
     <section id="aboutUs">
+        <div class="avatar"><img src="/img/cc/avatar-1577909_640.png" alt="Właściciel firmy"></div>
         <h2>O nas</h2>
         <p>Nazywam się Tomasz Ruść. Na rynku jako doradca związany z energią elektryczną, fotowoltaiką działam od 2013
-                roku i specjalizuję się głównie w zakresie instalacji fotowoltaicznych dla gospodarstw rolnych, domów i biznesu
-                oraz pełnym doradztwie energetycznym. Służę pomocą przy wszelkich planowanych inwestycjach związanych z zieloną
-                energią(od planowania aż po doradztwo, projektowanie, pośrednictwo w zdobywaniu funduszy, po montaż) oraz
-                wszelkim sprawami dotyczącymi energii elektrycznej związanej z występowaniem o nowe przyłącze, modernizacją
-                układów sieci, negocjowaniem umów związanych z dostarczeniem energii.</p>
+            roku i specjalizuję się głównie w zakresie instalacji fotowoltaicznych dla gospodarstw rolnych, domów i
+            biznesu
+            oraz pełnym doradztwie energetycznym. Służę pomocą przy wszelkich planowanych inwestycjach związanych z
+            zieloną
+            energią(od planowania aż po doradztwo, projektowanie, pośrednictwo w zdobywaniu funduszy, po montaż) oraz
+            wszelkim sprawami dotyczącymi energii elektrycznej związanej z występowaniem o nowe przyłącze, modernizacją
+            układów sieci, negocjowaniem umów związanych z dostarczeniem energii.</p>
     </section>
-    <section class="features">
+    <section class="features" id="features">
         <div>
             <i class="fas fa-home"></i>
             <h2>Domy jednorodzinne</h2>
@@ -75,7 +95,7 @@
 
         </div>
         <div>
-                <i class="fas fa-warehouse"></i>
+            <i class="fas fa-warehouse"></i>
             <h2>Gospodarstwo Rolne</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique libero sapiente explicabo maxime
                 dolore
@@ -93,7 +113,32 @@
 
         </div>
     </section>
+    <section>
+        <h2>Realizacje</h2>
+        <h2>Tu będzie galeria z najważniejszymi projektami?</h2>
+    </section>
 
+
+    <section>
+        <h2>Rekomendacje</h2>
+        <h2>Zestawienie obecnych klientów - rekomendacje</h2>
+    </section>
+    <section class="contactSection" id="contact">
+        <h2>Skontaktuj się z nami!</h2>
+        <form action="post" id="contact">
+            <label for="name">Imię:</label>
+            <input type="text" id="name" name="name" placeholder="Imię" required>
+            <label for="company">Firma:</label>
+            <input type="text" id="name" name="name" placeholder="Nazwa firmy">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+            <label for="topic">Temat:</label>
+            <input type="topic" id="topic" name="topic" placeholder="Wpisz temat wiadomości">
+            <label for="message">Wiadomość:</label>
+            <textarea type="textfield" id="message" form="contact" name="message" placeholder="Wpisz wiadomość"></textarea>
+<button>Wyślij</button>
+        </form>
+    </section>
     <footer>
 
     </footer>
