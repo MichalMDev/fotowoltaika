@@ -4,25 +4,23 @@ $(".burger").on("click", function () {
 
 // scroolowanie
 
-//   $('#aboutUs').on('click', function () {
-//    $('body, html').animate({
-//     scrollTop: $('#aboutus').offset().top
-//    }, 500)
-//   })
-
-  // $('.portfolio').on('click', function () {
-  //  $('body, html').animate({
-  //   scrollTop: $('.s2').offset().top
-  //  }, 500)
-  // })
-
-  $('nav a').on('click', function () {
+   $('nav a').on('click', function () {
     const goToSection = "#" + $(this).attr('class');
+    $('nav').toggleClass('off');
+    $('.burger .fas').toggleClass('off');
     $('body, html').animate({
-     scrollTop: $(goToSection).offset().top
+     scrollTop: $(goToSection).offset().top 
     }, 500)
    })
   
+
+   
+   $('.scrollContact').on('click', function () {
+    const goToSection = "#" + $(this).attr('class');
+    $('body, html').animate({
+     scrollTop: $(goToSection).offset().top 
+    }, 500)
+   })
 // formularz
 
 

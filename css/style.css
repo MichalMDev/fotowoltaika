@@ -30,6 +30,9 @@ border-bottom: 2px solid var(--color1);
     font-weight: bold;
     /* margin: 10px; */
 }
+a{
+    text-decoration: none;
+}
 
 .stickyBar {
     position: fixed;
@@ -134,6 +137,8 @@ nav ul {
     flex-direction: column;
     text-align: center;
     /* background-color: var(--color2); */
+    border: 1px solid var(--color1);
+
     width: 60%;
     margin: 0 auto;
 
@@ -152,7 +157,6 @@ nav ul li a {
     border-bottom: 1px solid var(--color5);
     display: block;
     text-align: center;
-    text-decoration: none;
     cursor: pointer;
     margin: 5px;
     transition: .2s ease;
@@ -194,6 +198,7 @@ section:nth-of-type(1) {
 section h2 {
     display: inline-block;
     font-size: 35px;
+    margin-bottom: 20px;
     /* padding-bottom: 20px; */
 }
 
@@ -220,14 +225,16 @@ section:nth-of-type(2) h2:nth-of-type(1) {
 
 section button {
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
     color: white;
     font-size: 20px;
     width: 100px;
     height: 50px;
     background-color: var(--color1);
+    outline: none;
 
 }
+
 
 section ul li {
     list-style-type: none;
@@ -282,6 +289,10 @@ section i {
     font-size: 60px;
 }
 
+section:nth-of-type(6) p:nth-of-type(1) {
+margin-bottom: 20px;
+ }
+
 form {
 margin: 0 auto; 
    width: 80%;
@@ -291,23 +302,47 @@ margin: 0 auto;
 
 
 }
-form label{
+ label{
     text-align: left;
 margin: 5px 0;
     }
-    form input, form textarea {
+     input {
         height: 50px;
         font-size: 20px;
     }
-    form textarea {
-        height: 100px;
+     form textarea {
+        height: 150px;
          
     }
-    form input:focus, form textarea:focus{
+     input:focus, form textarea:focus{
         border: 2px solid #374B78; 
         outline: none;
 
     }
-    form button {
-        margin-top: 20px;
-    }
+  
+footer {
+    padding: 15px;
+    background-color: var(--color5);
+    text-align: center;
+}
+
+footer i {
+    font-size: 20px;
+}   
+footer p{
+    padding: 2px;
+}
+
+.fa-facebook {
+    display: inline-block;
+color: #3b5998;
+}
+.fa-youtube{
+    display: inline-block;
+
+color: #c4302b;
+}
+
+footer p:last-child {
+    text-align: right;
+}

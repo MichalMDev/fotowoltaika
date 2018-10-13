@@ -14,7 +14,7 @@
 </head>
 
 <body>
-            <header>
+    <header>
         <h1>Fotowoltaika dla Ciebie!</h1>
     </header>
     <div class="stickyBar">
@@ -29,12 +29,12 @@
         </div>
         <nav class="off">
             <ul>
-                <li><a href='#aboutUs'>O nas</a></li>
-                <li><a href='#features'>Korzyści fotowoltaiki </a></li>
-                <li><a href='#'>Realizacje</a></li>
-                <li><a href='#'>Rekomendacje</a></li>
-                <li><a href='#'>Kalkulator</a></li>
-                <li><a href='#contact'>Kontakt</a></li>
+                <li><a class="scrollAboutUs" href='#'>O nas</a></li>
+                <li><a class="scrollFeatures" href='#'>Korzyści fotowoltaiki </a></li>
+                <li><a class="scrollProjects" href='#'>Realizacje</a></li>
+                <li><a class="scrollRecomendations" href='#'>Rekomendacje</a></li>
+                <li><a class="scrollCalculator" href='#'>Kalkulator</a></li>
+                <li><a class="scrollContact" href='#'>Kontakt</a></li>
 
 
             </ul>
@@ -63,9 +63,9 @@
             </ul>
         </p>
         <h2>Zadaj nam pytanie!</h2>
-        <button>Kontakt</button>
+        <a class="scrollContact" href='#'><button>Kontakt</button></a>
     </section>
-    <section id="aboutUs">
+    <section id="scrollAboutUs">
         <div class="avatar"><img src="/img/cc/avatar-1577909_640.png" alt="Właściciel firmy"></div>
         <h2>O nas</h2>
         <p>Nazywam się Tomasz Ruść. Na rynku jako doradca związany z energią elektryczną, fotowoltaiką działam od 2013
@@ -77,7 +77,7 @@
             wszelkim sprawami dotyczącymi energii elektrycznej związanej z występowaniem o nowe przyłącze, modernizacją
             układów sieci, negocjowaniem umów związanych z dostarczeniem energii.</p>
     </section>
-    <section class="features" id="features">
+    <section class="features" id="scrollFeatures">
         <div>
             <i class="fas fa-home"></i>
             <h2>Domy jednorodzinne</h2>
@@ -113,17 +113,23 @@
 
         </div>
     </section>
-    <section>
+    <section id="scrollProjects">
         <h2>Realizacje</h2>
         <h2>Tu będzie galeria z najważniejszymi projektami?</h2>
     </section>
 
 
-    <section>
+    <section id="scrollRecomendations">
         <h2>Rekomendacje</h2>
-        <h2>Zestawienie obecnych klientów - rekomendacje</h2>
+        <h2>Zestawienie opinii klientów - rekomendacje</h2>
     </section>
-    <section class="contactSection" id="contact">
+    <section id="scrollCalculator">
+        <h2>Kalkulator - sprawdź ile zaoszczędzisz</h2>
+        <p>Ile płacisz miesięcznie za prąd?</p>
+        <input type="number">
+        <button>Oblicz</button>
+    </section>
+    <section class="contactSection" id="scrollContact">
         <h2>Skontaktuj się z nami!</h2>
         <form action="post" id="contact">
             <label for="name">Imię:</label>
@@ -136,11 +142,15 @@
             <input type="topic" id="topic" name="topic" placeholder="Wpisz temat wiadomości">
             <label for="message">Wiadomość:</label>
             <textarea type="textfield" id="message" form="contact" name="message" placeholder="Wpisz wiadomość"></textarea>
-<button>Wyślij</button>
+            <button>Wyślij</button>
         </form>
     </section>
     <footer>
-
+            <p>OZE ZE ŚŁOŃCA Tomasz Ruść &copy 2018</p>
+            <p>Tel.: 735-875-822, email: Tomek@email.pl</p>
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-youtube"></i>
+            <p>Wykonał: Jakas moja wstawka</p>
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="js/script.js"></script>
