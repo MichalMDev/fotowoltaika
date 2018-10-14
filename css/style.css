@@ -333,7 +333,7 @@ section:nth-of-type(6) p:nth-of-type(1) {
             <div class="comment">Bardzo dobra firma, polecam</div>
         </div> */
 
-
+/* recomendations */
 .opinions {
     display: flex;
     flex-wrap: wrap;
@@ -365,7 +365,7 @@ section:nth-of-type(6) p:nth-of-type(1) {
     border-top: 1px solid white;
 
 }
-
+/* form */
 form {
     margin: 0 auto;
     width: 80%;
@@ -398,7 +398,7 @@ form textarea:focus {
     outline: none;
 
 }
-
+/* footer */
 footer {
     padding: 15px;
     background-color: var(--color5);
@@ -431,16 +431,17 @@ footer p:last-child {
 
 
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 854px) {
     .stickyBar {
-        text-align: left;
         display: flex;
-
-        padding: 10px;
+        height: 8vh;
     }
 
     .infoContainer {
-        width: 40%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        width: 50%;
     }
 
     div.contact {
@@ -465,13 +466,14 @@ footer p:last-child {
 
     nav ul {
         flex-direction: row;
-        /* justify-content: flex-end; */
         flex-wrap: nowrap;
         align-items: center;
         justify-content: center;
         border: none;
         margin: 0;
         height: 100%;
+        width: 100%;
+        max-width: 1200px;
 
 
 
@@ -479,22 +481,25 @@ footer p:last-child {
 
     nav ul li {
         display: inline-block;
-        height: 100%;
-        border-right: 1px solid var(--color1);
+        text-align: center;
+        /* height: 100%; */
+        max-height: 150px;
+        background-color:  var(--color1);
+
+        border: 1px solid white;
+
 
 
 
     }
 
-    nav ul li:nth-of-type(1) {
-        border-left: 1px solid var(--color1);
-    }
-
+  
     nav ul li a {
-        height: 100%;
-        padding: 10px;
-        margin: 0;
-        background-color: rgba(233, 241, 247, 0.9);
+
+        /* transform: translateY(50%); */
+        color: white;
+        /* height: 100%; */
+        /* background-color: rgba(233, 241, 247, 0.9); */
         border: none;
     }
 
@@ -502,10 +507,12 @@ footer p:last-child {
 
     nav ul li:hover {
         background-color: transparent;
+        border: 1px solid var(--color1);
     }
 
     ul li a:hover {
         border-bottom: none;
+        color: var(--color1);
     }
 }
 
