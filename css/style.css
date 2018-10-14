@@ -496,10 +496,7 @@ footer p:last-child {
   
     nav ul li a {
 
-        /* transform: translateY(50%); */
         color: white;
-        /* height: 100%; */
-        /* background-color: rgba(233, 241, 247, 0.9); */
         border: none;
     }
 
@@ -514,7 +511,40 @@ footer p:last-child {
         border-bottom: none;
         color: var(--color1);
     }
+
+    section p{
+        padding-left: 20%;
+        padding-right: 20%; 
+    }
+    /* features */
+.features {
+    background-position: bottom;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+     padding-left: 10%;
+    padding-right: 10%; 
+    /* paddingt: 10%; */
 }
+.features div{
+    padding-top: 20px;
+    min-width: 300px;
+    margin: 0;
+    width: 25%;
+}
+.features div p{
+    padding: 0px;
+    margin: 0;
+}
+    /* sekcje */
+ 
+
+    /* form */
+    form {
+        width: 40%;
+    }
+}
+
 
 /* stickyBar {
     position: fixed;
