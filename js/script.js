@@ -5,11 +5,11 @@ $(".burger").on("click", function () {
 // scroolowanie
 
    $('nav a').on('click', function () {
-    const goToSection = "#" + $(this).attr('class');
+    let goToSection = "#" + $(this).attr('class');
     $('nav').toggleClass('off');
     $('.burger .fas').toggleClass('off');
     $('body, html').animate({
-     scrollTop: $(goToSection).offset().top 
+     scrollTop: $(goToSection).offset().top - 93
     }, 500)
    })
   

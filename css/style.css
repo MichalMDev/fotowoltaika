@@ -256,9 +256,10 @@ background-position: center;
 
     padding: 10px;
     display: flex;
-    /* flex-wrap: wrap; */
-    text-align: center;
     flex-direction: column;
+justify-content: space-around;
+    text-align: center;
+ 
 }
 
 .features {
@@ -511,7 +512,9 @@ footer p:last-child {
         border-bottom: none;
         color: var(--color1);
     }
-
+    section h2 {
+              margin-bottom: 0;
+    }
     section p{
         padding-left: 20%;
         padding-right: 20%; 
@@ -522,8 +525,8 @@ footer p:last-child {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-     padding-left: 10%;
-    padding-right: 10%; 
+     /* padding-left: 10%;
+    padding-right: 10%;  */
     /* paddingt: 10%; */
 }
 .features div{
@@ -532,8 +535,10 @@ footer p:last-child {
     margin: 0;
     width: 25%;
 }
+
 .features div p{
-    padding: 0px;
+    padding: 0 10px 20px 10px;
+    /* padding-bottom: 10px; */
     margin: 0;
 }
     /* sekcje */
@@ -545,6 +550,11 @@ footer p:last-child {
     }
 }
 
+@media only screen and (max-width: 1557px) {
+    .features div h2{
+        min-height: 93px;
+    }
+}
 
 /* stickyBar {
     position: fixed;
