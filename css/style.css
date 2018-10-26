@@ -351,9 +351,13 @@ section:nth-of-type(6) p:nth-of-type(1) {
 }
 /* wynik kalkulatora */
 .calculatorResult {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    transition: 0.5s;
 
 }
 .calculatedResult {
@@ -467,6 +471,21 @@ label:last-of-type .checkbox {
     transform: rotate(45deg);
   }
 
+  .hidden{
+      display: none;
+  }
+  .fa-info-circle{
+      position: block;
+      display: inline-block;
+      font-size: 20px;
+      cursor: pointer;
+  }
+.privacyInfo {
+    height: 0;
+    opacity: 0;
+    font-size: 15px;
+    transition: .3s;
+}
 /* footer */
 footer {
     padding: 15px;
