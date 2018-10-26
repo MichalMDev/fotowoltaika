@@ -23,7 +23,6 @@ $(".burger").on("click", function () {
    })
 // formularz
 
-
 const input = document.querySelector('#email');
 email.addEventListener('change', function() {
     const className = 'errorField';
@@ -35,3 +34,7 @@ email.addEventListener('change', function() {
         this.classList.remove(className);
     }
 });
+// rozwiniecie info - zrob
+document.getElementsByClassName('.showMorePrivacy').addEventListener("click", function(){
+    document.getElementsByClassName('.privacyInfo').classList.toggleClass('off');
+})
