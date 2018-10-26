@@ -24,7 +24,7 @@ a {
 .stickyBar {
     position: fixed;
     top: 20px;
-    height: 10vh;
+    height: 9vh;
     width: 100%;
     background-color: rgba(233, 241, 247, 0.9);
     border-top: 2px solid #374B78;
@@ -34,12 +34,12 @@ a {
 
 }
 
-.logo {
+.stickyBar .logo {
     /* padding: 30px; */
     font-size: 18px;
 }
 
-.contact {
+.stickyBar .contact {
     text-decoration: none;
     /* padding-right: 20%; */
     text-align: left;
@@ -71,7 +71,7 @@ header h1 {
 
 }
 
-.burger {
+.stickyBar .burger {
     position: absolute;
     /* position: fixed; */
     top: 50%;
@@ -102,7 +102,7 @@ header h1 {
     transform: translate(-50%, -50%);
 }
 
-i.off {
+.burger i.off {
     display: none;
 }
 
@@ -136,28 +136,31 @@ nav ul {
 nav ul li {
     width: 100%;
     list-style: none;
-
+    
     background-color: rgba(233, 241, 247, 0.9);
 
 }
 
 nav ul li a {
+    width: 100%;
     color: var(--color1);
-    border-bottom: 1px solid var(--color5);
+    border-bottom: 2px solid transparent;
     display: block;
-    text-align: center;
     cursor: pointer;
-    margin: 5px;
+    margin: 5px 0;
     transition: .2s ease;
 
 }
 
 ul li a:hover {
-    border-bottom: 1px solid var(--color1);
+    border-bottom: 2px solid var(--color1);
 
 
     /* SEKCJE */
 }
+
+
+
 
 section {
     /* background-color: var(--color2); */
@@ -180,12 +183,12 @@ section:nth-child(even) {
 
 }
 
-section:nth-of-type(1) {
+/* section:nth-of-type(1) {
     padding-top: 20px;
-    /* margin-top: 20px; */
+     margin-top: 20px;
+    } */
+    
 
-
-}
 
 section h2 {
     display: inline-block;
@@ -202,13 +205,13 @@ section h2 {
 
 section:nth-of-type(3) h2 {
 
-    border-bottom: none;
+    border-bottom: none; /* features icons  */
 }
 
 section:nth-of-type(1) p:nth-of-type(1),
 section:nth-of-type(1) p:nth-of-type(3) {
-    margin-top: 20px;
-    padding-bottom: 10px;
+    /* margin-top: 20px; */
+    /* padding-bottom: 10px; */
 }
 
 section:nth-of-type(1) h2:nth-of-type(2),
@@ -225,7 +228,10 @@ section button {
     height: 50px;
     background-color: var(--color1);
     outline: none;
-
+    cursor: pointer;
+}
+section:nth-of-type(1) button {
+     animation: shakes 5s linear infinite;
 }
 
 
@@ -233,8 +239,8 @@ section ul li {
     list-style-type: none;
 }
 
-.avatar{
-background-position: center;
+section .avatar {
+    background-position: center;
     margin: 10px auto;
     width: 100px;
     height: 100px;
@@ -242,7 +248,7 @@ background-position: center;
     overflow: hidden;
 }
 
-.avatar img {
+section .avatar img {
     height: 100%;
     width: 100%;
 }
@@ -253,18 +259,12 @@ background-position: center;
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-
     padding: 10px;
     display: flex;
     flex-direction: column;
-justify-content: space-around;
+    justify-content: space-around;
     text-align: center;
- 
-}
-
-.features {
     color: white;
-
 }
 
 .features div {
@@ -273,7 +273,7 @@ justify-content: space-around;
     flex-direction: column;
 }
 
-.features p {
+.features div p {
     font-size: 20px;
 }
 
@@ -285,7 +285,6 @@ section div {
 section i {
     font-size: 60px;
 }
-
 
 /* gallery */
 .gallery {
@@ -300,9 +299,6 @@ section i {
     width: 350px;
     overflow: hidden;
     margin: 15px 15px;
-
-
-
 }
 
 .gallery div p {
@@ -325,15 +321,6 @@ section:nth-of-type(6) p:nth-of-type(1) {
     margin-bottom: 20px;
 }
 
-
-/* <section class="opinions" id="scrollRecomendations">
-        <h2>Co o nas mówią?</h2>
-        <p>Poznaj opinie naszych klientów</p>
-        <div class="opinion">
-            <div class="CompanyName">Firma Sp.z.o.o</div>
-            <div class="comment">Bardzo dobra firma, polecam</div>
-        </div> */
-
 /* recomendations */
 .opinions {
     display: flex;
@@ -342,19 +329,16 @@ section:nth-of-type(6) p:nth-of-type(1) {
 
 }
 
-.opinion {
+.opinions .opinion {
     border-radius: 20px;
     width: 200px;
     border: 1px solid var(--color1);
-}
-
-.opinion {
     background-color: white;
 }
 
-.companyName {
-    border-top: 1px solid var(--color1);
 
+.opinion .companyName {
+    border-top: 1px solid var(--color1);
 }
 
 .opinion:nth-child(even) {
@@ -364,7 +348,35 @@ section:nth-of-type(6) p:nth-of-type(1) {
 
 .opinion:nth-child(even) .companyName {
     border-top: 1px solid white;
+}
+/* wynik kalkulatora */
+.calculatorResult {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 
+}
+.calculatedResult {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    
+    width: 300px;
+
+
+}
+.calculatedResult div {
+    width: 50%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 3px solid var(--color1);
+    border-radius: 20px;
+}
+
+.calculatedResult i  {
+   /* font-size: 50px; */
+color: var(--color1);
+/* background-color: red; */
 }
 /* form */
 form {
@@ -373,11 +385,9 @@ form {
     display: flex;
     flex-direction: column;
     font-size: 20px;
-
-
 }
 
-label {
+form label {
     text-align: left;
     margin: 5px 0;
 }
@@ -399,6 +409,7 @@ form textarea:focus {
     outline: none;
 
 }
+
 /* footer */
 footer {
     padding: 15px;
@@ -414,12 +425,12 @@ footer p {
     padding: 2px;
 }
 
-.fa-facebook {
+footer .fa-facebook {
     display: inline-block;
     color: #3b5998;
 }
 
-.fa-youtube {
+footer .fa-youtube {
     display: inline-block;
 
     color: #c4302b;
@@ -435,25 +446,25 @@ footer p:last-child {
 @media only screen and (min-width: 854px) {
     .stickyBar {
         display: flex;
-        height: 8vh;
+        height: 10vh;
     }
 
-    .infoContainer {
+    .stickyBar .infoContainer {
         display: flex;
         flex-direction: row;
         text-align: center;
         width: 50%;
     }
 
-    div.contact {
+    .stickyBar div.contact {
         padding-right: 0px;
     }
 
-    .burger {
+    .stickyBar .burger {
         display: none;
     }
 
-    nav {
+    .stickyBar nav {
         position: static;
         flex-grow: 1;
         display: block;
@@ -462,10 +473,9 @@ footer p:last-child {
         height: 100%;
         font-size: 20px;
         /* z-index: 2; */
-
     }
 
-    nav ul {
+    .stickyBar nav ul {
         flex-direction: row;
         flex-wrap: nowrap;
         align-items: center;
@@ -475,9 +485,6 @@ footer p:last-child {
         height: 100%;
         width: 100%;
         max-width: 1200px;
-
-
-
     }
 
     nav ul li {
@@ -485,18 +492,12 @@ footer p:last-child {
         text-align: center;
         /* height: 100%; */
         max-height: 150px;
-        background-color:  var(--color1);
-
+        background-color: var(--color1);
         border: 1px solid white;
-
-
-
-
     }
 
-  
-    nav ul li a {
 
+    nav ul li a {
         color: white;
         border: none;
     }
@@ -512,37 +513,41 @@ footer p:last-child {
         border-bottom: none;
         color: var(--color1);
     }
-    section h2 {
-              margin-bottom: 0;
-    }
-    section p{
-        padding-left: 20%;
-        padding-right: 20%; 
-    }
-    /* features */
-.features {
-    background-position: bottom;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-     /* padding-left: 10%;
-    padding-right: 10%;  */
-    /* paddingt: 10%; */
-}
-.features div{
-    padding-top: 20px;
-    min-width: 300px;
-    margin: 0;
-    width: 25%;
-}
 
-.features div p{
-    padding: 0 10px 20px 10px;
-    /* padding-bottom: 10px; */
-    margin: 0;
-}
-    /* sekcje */
- 
+    section h2 {
+        margin-bottom: 0;
+    }
+
+    section p {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+
+    /* features */
+    .features {
+        background-position: bottom;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* padding-left: 10%;
+    padding-right: 10%;  */
+        /* paddingt: 10%; */
+    }
+
+    .features div {
+        padding-top: 20px;
+        min-width: 300px;
+        margin: 0;
+        width: 25%;
+    }
+
+    .features div p {
+        padding: 0 10px 20px 10px;
+        /* padding-bottom: 10px; */
+        margin: 0;
+    }
+
+
 
     /* form */
     form {
@@ -551,66 +556,46 @@ footer p:last-child {
 }
 
 @media only screen and (max-width: 1557px) {
-    .features div h2{
+    .features div h2 {
         min-height: 93px;
     }
 }
 
-/* stickyBar {
-    position: fixed;
-    top: 20px;
-    height: 10vh;
-    width: 100%;
-    background-color: rgba(233, 241, 247, 0.9);
-    border-top: 2px solid #374B78;
-    border-bottom: 1px solid #374B78;
-    text-align: left;
-    z-index: 1;
-
-} */
-
-/* av {
-    position: absolute;
-    left: 0;
-    width: 100%;
-    top: 10vh;
-    padding: 10px;
-     background-color: var(--color1); 
-    transition: .2s;
-    font-size: 24px;
-}
-
-nav.off {
-    top: -300px;
-}
-
-nav ul {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    /* background-color: var(--color2); */
-/* border: 1px solid var(--color1);
-
-    width: 60%;
-    margin: 0 auto;
-
-}
-
-nav ul li {
-    width: 100%;
-    list-style: none;
-
-    background-color: rgba(233, 241, 247, 0.9);
-
-}
-
-nav ul li a {
-    color: var(--color1);
-    border-bottom: 1px solid var(--color5);
-    display: block;
-    text-align: center;
-    cursor: pointer;
-    margin: 5px;
-    transition: .2s ease;
-
- */
+@keyframes shakes {
+    0% {
+     transform: translateX(0) rotateX(0deg)
+    }
+    90% {
+     transform: translateX(0) rotateX(0deg)
+    }
+    91% {
+     transform: translateX(20px) rotateX(-10deg)
+    }
+    92% {
+     transform: translateX(-20px) rotateX(10deg)
+    }
+    93% {
+     transform: translateX(20px) rotateX(-10deg)
+    }
+    94% {
+     transform: translateX(-20px) rotateX(10deg)
+    }
+    95% {
+     transform: translateX(20px) rotateX(-10deg)
+    }
+    96% {
+     transform: translateX(-20px) rotateX(10deg)
+    }
+    97% {
+     transform: translateX(20px) rotateX(-10deg)
+    }
+    98% {
+     transform: translateX(-20px) rotateX(10deg)
+    }
+    99% {
+     transform: translateX(20px) rotateX(-10deg)
+    }
+    100% {
+     transform: translateX(0) rotateX(0deg)
+    }
+   }
