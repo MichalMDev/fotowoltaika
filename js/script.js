@@ -21,6 +21,13 @@ $('.scrollContact').on('click', function () {
         scrollTop: $(goToSection).offset().top
     }, 500)
 })
+
+$('.scrollResult').on('click', function () {
+    const goToSection = "#" + $(this).attr('class');
+    $('body, html').animate({
+        scrollTop: $(goToSection).offset().top-93
+    }, 500)
+})
 // formularz
 
 const input = document.querySelector('#email');
@@ -37,7 +44,7 @@ email.addEventListener('change', function () {
 
 // kalkulator - obliczenia
 
-document.querySelector('.showcalculator').addEventListener('click', function () {
+document.querySelector('.scrollResult').addEventListener('click', function () {
     let calc = document.querySelector('.calculatorResult');
 
     calc.style.height = "auto";

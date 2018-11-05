@@ -51,6 +51,10 @@
             woj. pomorskiego.
             Jeśli jesteś spoza tego regionu, a interesują Cię odnawialne źródła energii, skontaktuj się – a na pewno
             Cię odwiedzimy.
+            <h2>Artykuły na temat fotowoltaiki</h2>
+            <h3>Artukuł 1</h3>
+            <h3>Artukuł 1</h3>
+            <h3>Artukuł 1</h3>
             <!-- <p>W swojej pracy korzystamy z urządzeń takich uznanych producentów, takich jak</p>
             <ul>
                 <li>
@@ -181,9 +185,10 @@
         <h2>Kalkulator - sprawdź ile zaoszczędzisz</h2>
         <p>Ile płacisz miesięcznie za prąd?</p>
         <input type="number">
-        <button class="showcalculator">Oblicz</button>
-    </section>
-    <section id="scrollResult">
+        <!-- <button class="showcalculator ">Oblicz</button> -->
+        <button class="scrollResult">Oblicz</button>
+    </section>   
+     <section id="scrollResult">
         <div class="calculatorResult off">
             <div class="calculatedResult">
 
@@ -217,7 +222,7 @@
     <section class="contactSection" id="scrollContact">
         <h2>Skontaktuj się z nami!</h2>
         <p>Odpowiemy najszybciej jak się da.</p>
-        <form action="post" id="contact">
+        <form action="post" id="contact" action="mail.php" method="POST">
             <label for="name">Imię:</label>
             <input type="text" id="name" name="name" placeholder="Imię" required>
             <label for="company">Firma:</label>
@@ -229,7 +234,7 @@
             <label for="message">Wiadomość:</label>
             <textarea type="textfield" id="message" form="contact" name="message" placeholder="Wpisz wiadomość"></textarea>
             <label for="privacy">
-                <input class="checkbox" type="checkbox" id="privacy" name="privacy"/>
+                <input class="checkbox" type="checkbox" id="privacy" name="privacy">
                 <span class="checkmark"></span>
                 Zgoda na przetwarzanie danych osobowych</label>
                 <i class="fas fa-info-circle showMorePrivacy"></i>
