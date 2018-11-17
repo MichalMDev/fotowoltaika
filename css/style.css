@@ -34,9 +34,19 @@ a {
 
 }
 
-.stickyBar .logo {
-    /* padding: 30px; */
-    font-size: 18px;
+.stickyBar .infoContainer {
+    height: 100%;
+}
+
+.stickyBar .infoContainer div {
+    height: 100%;
+    width: 50%;
+}
+
+.stickyBar .infoContainer .logo img {
+    width: 100%;
+    height: 100%;
+    max-width: 500px;
 }
 
 .stickyBar .contact {
@@ -136,7 +146,7 @@ nav ul {
 nav ul li {
     width: 100%;
     list-style: none;
-    
+
     background-color: rgba(233, 241, 247, 0.9);
 
 }
@@ -160,7 +170,57 @@ ul li a:hover {
 }
 
 
+/* accordion */
+.accordion {
+    position: relative;
+    background-color: var(--color5);
+    color: black;
+    cursor: pointer;
+    width: 50%;
+    padding-left: 10px;
+    text-align: left;
 
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.accordion:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '+';
+    font-size: 35px;
+    color: white;
+    float: right;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+
+
+.active,
+.accordion:hover {
+    background-color: var(--color1);
+    color: white;
+}
+
+.active:after {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "-";
+    color: white;
+    font-size: 50px;
+ }
+
+.panel {
+    padding: 5px 18px;
+    background-color: #eee;
+    display: none;
+    overflow: hidden;
+}
 
 section {
     /* background-color: var(--color2); */
@@ -187,7 +247,7 @@ section:nth-child(even) {
     padding-top: 20px;
      margin-top: 20px;
     } */
-    
+
 
 
 section h2 {
@@ -205,7 +265,8 @@ section h2 {
 
 section:nth-of-type(3) h2 {
 
-    border-bottom: none; /* features icons  */
+    border-bottom: none;
+    /* features icons  */
 }
 
 section:nth-of-type(1) p:nth-of-type(1),
@@ -236,8 +297,9 @@ section button {
     outline: none;
     cursor: pointer;
 }
-section:nth-of-type(1) button {
-     animation: shakes 5s linear infinite;
+
+section:nth-of-type(1) button:last-child {
+    animation: shakes 5s linear infinite;
 }
 
 
@@ -265,10 +327,11 @@ section .avatar img {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
-    padding: 10px;
+    padding: 10px 150px;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     text-align: center;
     color: white;
 }
@@ -355,6 +418,7 @@ section:nth-of-type(6) p:nth-of-type(1) {
 .opinion:nth-child(even) .companyName {
     border-top: 1px solid white;
 }
+
 /* wynik kalkulatora */
 .calculatorResult {
     height: 0;
@@ -366,15 +430,17 @@ section:nth-of-type(6) p:nth-of-type(1) {
     transition: 0.5s;
 
 }
+
 .calculatedResult {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    
+
     width: 300px;
 
 
 }
+
 .calculatedResult div {
     width: 50%;
     margin: 10px auto;
@@ -383,11 +449,12 @@ section:nth-of-type(6) p:nth-of-type(1) {
     border-radius: 20px;
 }
 
-.calculatedResult i  {
-   /* font-size: 50px; */
-color: var(--color1);
-/* background-color: red; */
+.calculatedResult i {
+    /* font-size: 50px; */
+    color: var(--color1);
+    /* background-color: red; */
 }
+
 /* form */
 form {
     margin: 0 auto;
@@ -419,6 +486,7 @@ form textarea:focus {
     outline: none;
 
 }
+
 form label:last-of-type {
     display: block;
     position: relative;
@@ -427,16 +495,17 @@ form label:last-of-type {
     cursor: pointer;
     font-size: 22px;
 }
+
 label:last-of-type .checkbox {
     position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
     width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
+}
+
+/* Create a custom checkbox */
+.checkmark {
     position: absolute;
     top: 0;
     left: 0;
@@ -444,28 +513,30 @@ label:last-of-type .checkbox {
     width: 25px;
     /* border: 1px solid black; */
     background-color: white
-  }
-  /* On mouse-over, add a grey background color */
-  label:last-of-type:hover input ~ .checkmark {
+}
+
+/* On mouse-over, add a grey background color */
+label:last-of-type:hover input~.checkmark {
     background-color: var(--color1);
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  label:last-of-type input:checked ~ .checkmark {
+}
+
+/* When the checkbox is checked, add a blue background */
+label:last-of-type input:checked~.checkmark {
     background-color: var(--color1);
-  }
-  
- 
-  .checkmark:after {
+}
+
+
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
-  }
-    
-  label:last-of-type input:checked ~ .checkmark:after {
+}
+
+label:last-of-type input:checked~.checkmark:after {
     display: block;
-  }
-  label:last-of-type .checkmark:after {
+}
+
+label:last-of-type .checkmark:after {
     left: 9px;
     top: 5px;
     width: 5px;
@@ -475,23 +546,26 @@ label:last-of-type .checkbox {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-  }
+}
 
-  .hidden{
-      display: none;
-  }
-  .fa-info-circle{
-      position: block;
-      display: inline-block;
-      font-size: 20px;
-      cursor: pointer;
-  }
+.hidden {
+    display: none;
+}
+
+.fa-info-circle {
+    position: block;
+    display: inline-block;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 .privacyInfo {
     height: 0;
     opacity: 0;
     font-size: 15px;
     transition: .3s;
 }
+
 /* footer */
 footer {
     padding: 15px;
@@ -532,15 +606,18 @@ footer p:last-child {
     }
 
     .stickyBar .infoContainer {
-        display: flex;
-        flex-direction: row;
-        text-align: center;
         width: 50%;
     }
 
-    .stickyBar div.contact {
-        padding-right: 0px;
+    .stickyBar .infoContainer .logo div {
+        height: 100%;
+        width: 100%;
+        max-width: 500px;
     }
+
+    /* .stickyBar div.contact {
+        padding-right: 0px;
+    } */
 
     .stickyBar .burger {
         display: none;
@@ -643,41 +720,66 @@ footer p:last-child {
     }
 }
 
+@media only screen and (max-width: 1500px) {
+    .features {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 986px) {
+    .features {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
 @keyframes shakes {
     0% {
-     transform: translateX(0) rotateX(0deg)
+        transform: translateX(0) rotateX(0deg)
     }
+
     90% {
-     transform: translateX(0) rotateX(0deg)
+        transform: translateX(0) rotateX(0deg)
     }
+
     91% {
-     transform: translateX(20px) rotateX(-10deg)
+        transform: translateX(20px) rotateX(-10deg)
     }
+
     92% {
-     transform: translateX(-20px) rotateX(10deg)
+        transform: translateX(-20px) rotateX(10deg)
     }
+
     93% {
-     transform: translateX(20px) rotateX(-10deg)
+        transform: translateX(20px) rotateX(-10deg)
     }
+
     94% {
-     transform: translateX(-20px) rotateX(10deg)
+        transform: translateX(-20px) rotateX(10deg)
     }
+
     95% {
-     transform: translateX(20px) rotateX(-10deg)
+        transform: translateX(20px) rotateX(-10deg)
     }
+
     96% {
-     transform: translateX(-20px) rotateX(10deg)
+        transform: translateX(-20px) rotateX(10deg)
     }
+
     97% {
-     transform: translateX(20px) rotateX(-10deg)
+        transform: translateX(20px) rotateX(-10deg)
     }
+
     98% {
-     transform: translateX(-20px) rotateX(10deg)
+        transform: translateX(-20px) rotateX(10deg)
     }
+
     99% {
-     transform: translateX(20px) rotateX(-10deg)
+        transform: translateX(20px) rotateX(-10deg)
     }
+
     100% {
-     transform: translateX(0) rotateX(0deg)
+        transform: translateX(0) rotateX(0deg)
     }
-   }
+}

@@ -28,6 +28,26 @@ $('.scrollResult').on('click', function () {
         scrollTop: $(goToSection).offset().top-93
     }, 500)
 })
+
+// accordion
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+        /* Toggle between adding and removing the "active" class,
+        to highlight the button that controls the panel */
+        this.classList.toggle("active");
+
+        /* Toggle between hiding and showing the active panel */
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+            panel.style.display = "none";
+        } else {
+            panel.style.display = "block";
+        }
+    });
+}
 // formularz
 
 const input = document.querySelector('#email');
@@ -50,7 +70,20 @@ document.querySelector('.scrollResult').addEventListener('click', function () {
     calc.style.height = "auto";
     calc.style.opacity = "1";
 
+    let cost = document.getElementById('monthlyCost').value;
+    let yearlyCost = cost*12;
+    document.getElementsByClassName('yearlyCost')[0].innerHTML = yearlyCost + " zł";
+
+    let yearlyCost25 = (cost*12)*25;
+    document.getElementsByClassName('25yearsCost')[0].innerHTML = yearlyCost25 + " zł";
+
+    let solarsCost = []; //uzupelnic ceny paneli
+
+    // let calcProfit = (cost*12)*25 - ;
+    document.getElementsByClassName('calcProfit')[0].innerHTML = calcProfit + " zł";
 });
+
+
 // rozwiniecie info - zrob
 
 
